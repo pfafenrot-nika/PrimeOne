@@ -1,8 +1,8 @@
 {
-	"name": "fls_start_gulp",
+	"name": "PrimeOne",
 	"version": "1.0.0",
-	"description": "Start template with Gulp",
-	"author": "FLS",
+	"description": "",
+	"author": "nika-pfafenrot",
 	"private": true,
 	"license": "GNU General Public License (GPL)",
 	"devDependencies": {
