@@ -38,7 +38,7 @@ $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 880;
 $md1: $maxWidthContainer + 12;
-$md2: 750;
+$md2: 767.98;
 $md3: 767.98;
 $md4: 479.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
@@ -107,6 +107,10 @@ body {
 .main-screen {
 	@include flexbox();
 	background-color: #000;
+	margin: 0px 0px 75px 0px;
+	@media (max-width: $md2 + px) {
+		margin: 0px 0px 40px 0px;
+	}
 	// .main-screen__column
 	&__column {
 		flex: 0 0 50%;
@@ -168,13 +172,88 @@ body {
 	}
 	// .body-buttons__link
 	&__link {
-		font-family: 'Bebas';
-		font-size: 15px;
-		text-decoration: underline;
+	}
+}
+
+//</БЛОК ПРОДУКТЫ>====================================================================================================
+.products {
+	margin: 0px 0px 40px 0px;
+	@media (max-width: $md2 + px) {
+		margin: 0;
+	}
+	// .products__column
+	&__column {
+		flex: 0 0 25%;
+		margin: 0px 0px 40px 0px;
+		@media (max-width: $md2 + px) {
+			flex: 0 0 50%;
+		}
+		@media (max-width: 380px) {
+			flex: 1 1 100%;
+		}
+	}
+	// .products-body
+	&-body {
+		@include flexbox();
+		@media (max-width: $md2 + px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.products-item {
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+	// .products-item__image
+	&__image {
+		display: block;
+		padding: 0px 0px 100% 0px;
+		margin: 0px 0px 25px 0px;
+		@media (max-width: 380px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .products-item__title
+	&__title {
+		height: 50px;
+		overflow: hidden;
+		padding: 0px 10px 0px 0px;
+		max-width: 185px;
+		display: block;
+		font-family: 'AkzidenzGroteskBQ-BdCnd';
+		font-size: 25px;
 		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		color: #fffffe;
-		margin: 0px 0px 0px 15px;
+		letter-spacing: 2.5px;
+		color: #000;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: 380px) {
+			max-width: none;
+			height: auto;
+			overflow: visible;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	// .products-item__text
+	&__text {
+		flex: 1 1 auto;
+		padding: 0px 10px 0px 0px;
+		max-width: 185px;
+		font-size: 15px;
+		line-height: 25px;
+		color: #000;
+		margin: 0px 0px 20px 0px;
+		@media (max-width: 380px) {
+			max-width: none;
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .products-item__btn
+	&__btn {
+		margin: 0px 0px 29px 0px;
+	}
+	// .products-item__link
+	&__link {
 	}
 }
 

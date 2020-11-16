@@ -177,6 +177,20 @@ body._lock {
   width: 100%;
 }
 
+.link {
+  font-family: 'Bebas';
+  font-size: 15px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fffffe;
+  margin: 0px 0px 0px 15px;
+}
+
+.link_b {
+  color: #000;
+}
+
 .select {
   position: relative;
 }
@@ -1117,6 +1131,7 @@ body.ie ._ibg img {
   display: flex;
   font-size: 0;
   background-color: #000;
+  margin: 0px 0px 75px 0px;
 }
 
 .main-screen__column {
@@ -1163,17 +1178,73 @@ body.ie ._ibg img {
           align-items: center;
 }
 
-.body-buttons__link {
-  font-family: 'Bebas';
-  font-size: 15px;
-  text-decoration: underline;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #fffffe;
-  margin: 0px 0px 0px 15px;
+.products {
+  margin: 0px 0px 40px 0px;
 }
 
-@media (min-width: 750px) {
+.products__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  margin: 0px 0px 40px 0px;
+}
+
+.products-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.products-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.products-item__image {
+  display: block;
+  padding: 0px 0px 100% 0px;
+  margin: 0px 0px 25px 0px;
+}
+
+.products-item__title {
+  height: 50px;
+  overflow: hidden;
+  padding: 0px 10px 0px 0px;
+  max-width: 185px;
+  display: block;
+  font-family: 'AkzidenzGroteskBQ-BdCnd';
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #000;
+  margin: 0px 0px 30px 0px;
+}
+
+.products-item__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0px 10px 0px 0px;
+  max-width: 185px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  margin: 0px 0px 20px 0px;
+}
+
+.products-item__btn {
+  margin: 0px 0px 29px 0px;
+}
+
+@media (min-width: 767.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
@@ -1217,7 +1288,7 @@ body.ie ._ibg img {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767.98px) {
   ._container {
     max-width: none;
     padding: 0 10px;
@@ -1310,6 +1381,10 @@ body.ie ._ibg img {
     left: 0;
   }
 
+  .main-screen {
+    margin: 0px 0px 40px 0px;
+  }
+
   .main-screen__column {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -1319,9 +1394,24 @@ body.ie ._ibg img {
   .main-screen__column:first-child {
     display: none;
   }
+
+  .products {
+    margin: 0;
+  }
+
+  .products__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .products-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-@media (max-width: 750px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) and (max-width: 767.98px) {
   .header-menu__icon {
     display: block;
     position: absolute;
@@ -1404,6 +1494,30 @@ body.ie ._ibg img {
     top: 18px;
   }
 }
+
+@media (max-width: 380px) {
+  .products__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .products-item__image {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .products-item__title {
+    max-width: none;
+    height: auto;
+    overflow: visible;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .products-item__text {
+    max-width: none;
+    margin: 0px 0px 15px 0px;
+  }
+}
 @supports (-webkit-appearance:none){
 .select__value:before{background:url("../img/icons/select.svg") center/100% no-repeat}
 .checkbox__input:checked + .checkbox__text:before{background:#fff url("../img/icons/check.svg") center no-repeat}
@@ -1413,7 +1527,7 @@ body.ie ._ibg img {
 .popup__close{background:url("../img/icons/close.svg") 0 0 no-repeat}
 }
 
- @media (min-width: 750px){
+ @media (min-width: 767.98px){
 
 @supports (-webkit-appearance:none){
 
@@ -1437,7 +1551,7 @@ body.ie ._ibg img {
 
 }
 
- @media (max-width: 750px){
+ @media (max-width: 767.98px){
 
 @supports (-webkit-appearance:none){
 
@@ -1445,7 +1559,7 @@ body.ie ._ibg img {
 
 }
 
- @media (max-width: 750px) and (max-width: 767.98px){
+ @media (max-width: 767.98px) and (max-width: 767.98px){
 
 @supports (-webkit-appearance:none){
 
@@ -1454,6 +1568,14 @@ body.ie ._ibg img {
 }
 
  @media (max-width: 479.98px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 380px){
 
 @supports (-webkit-appearance:none){
 
