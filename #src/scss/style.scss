@@ -175,7 +175,7 @@ body {
 	}
 }
 
-//</БЛОК ПРОДУКТЫ>====================================================================================================
+//</БЛОК "ПРОДУКТЫ">====================================================================================================
 .products {
 	margin: 0px 0px 40px 0px;
 	@media (max-width: $md2 + px) {
@@ -256,5 +256,120 @@ body {
 	&__link {
 	}
 }
+
+//</БЛОК "ПОЧЕМУ ВЫБИРАЮТ НАС?">====================================================================================================
+.why-top {
+	background-color: #000;
+	@include flexbox();
+	// .why-top__column
+	&__column {
+		flex: 0 0 50%;
+		@media (max-width: $md1 + px) {
+			flex: 1 1 100%;
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+	// .why-top__text
+	&__text {
+		font-family: 'AkzidenzGroteskBQ-BdCnd';
+		font-size: 50px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		color: #fff;
+		text-align: right;
+		padding: 50px 60px 50px 0px;
+		@media (max-width: $md1 + px) {
+			font-size: 40px;
+			text-align: center;
+			padding: 30px 0px;
+		}
+		@media (max-width: $md2 + px) {
+			font-size: 30px;
+			padding: 20px 0px;
+		}
+	}
+	// .why-top__image
+	&__image {
+		height: 100%;
+	}
+}
+
+.why-body {
+	padding: 50px 0px 0px 0px;
+	background-color: #ebebeb;
+	@media (max-width: $md4 + px) {
+		padding: 30px 0px 0px 0px;
+	}
+	//.why-body-row 
+	&-row {
+		@include flexbox();
+		flex-wrap: wrap;
+	}		
+	// .why-body__column
+	&__column {
+		flex: 0 0 50%;
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md1 + px) {
+			flex: 1 1 100%;
+		}
+		@media (max-width: $md4 + px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+}
+
+.why-body-item {
+	@include flexbox();
+	// .why-body-item__icon
+	&__icon {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 100px;
+		height: 100px;
+		background-color: #000;
+		@media (max-width: $md4 + px) {
+			flex: 0 0 80px;
+			height: 80px;
+			padding: 15px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.why-body-item-body {
+	flex: 1 1 100%;
+	padding: 0px 0px 0px 11px;
+	@include flexbox();
+	flex-direction: column;
+	// .why-body-item-body__title
+	&__title {
+		flex: 1 1 auto;
+		font-family: 'AkzidenzGroteskBQ-BdCnd';
+		font-size: 25px;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		@media (max-width: $md4 + px) {
+			font-size: 20px;
+			margin: 0px 0px 5px 0px;
+		}
+	}
+	// .why-body-item-body__text
+	&__text {
+		font-size: 15px;
+		line-height: 25px;
+		padding: 0px 15px 0px 0px;
+		@media (max-width: $md4 + px) {
+			line-height: 20px;
+		}
+	}
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
