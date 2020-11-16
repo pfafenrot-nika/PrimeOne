@@ -369,7 +369,116 @@ body {
 	}
 }
 
-//</ОСНОВНОЙ БЛОК>====================================================================================================
+//</БЛОК "КОНТАКТЫ">====================================================================================================
+.contacts {
+	padding: 80px 0px 0px 0px;
+	@media (max-width: $md2 + px) {
+		padding: 30px 0px 0px 0px;
+	}
+	// .contacts__title
+	&__title {
+		font-family: 'AkzidenzGroteskBQ-BdCnd';
+		font-size: 50px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md2 + px) {
+			font-size: 35px;
+		}
+	}
+}
 
+.contacts-body {
+	@include flexbox();
+	flex-wrap: wrap;
+	// .contacts-body__column
+	&__column {
+		flex: 0 0 50%;
+		margin: 0px 0px 20px 0px;
+		@media (max-width: $md2 + px) {
+			flex: 1 1 100%;
+		}
+	}
+	// .contacts-body__item
+	&__item {
+		font-size: 15px;
+		line-height: 27px;
+		padding: 0px 0px 0px 35px;
+		display: inline-block;
+		color: #000;
+		// .contacts-body__item_1
+		&_1 {
+			background: url('../img/contacts/01.svg') left no-repeat;
+		}
+		// .contacts-body__item_2
+		&_2 {
+			background: url('../img/contacts/02.svg') left no-repeat;
+		}
+		// .contacts-body__item_3
+		&_3 {
+			background: url('../img/contacts/03.svg') left no-repeat;
+		}
+	}
+}
+
+.contacts-social {
+	@include flexbox();
+	// .contacts-social__item
+	&__item {
+		margin: 0px 30px 0px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		} 
+	}
+}
+
+.contacts-content {
+	@include flexbox();
+	background: #000;
+	@media (max-width: $md2 + px) {
+		display: block;
+	}
+	// .contacts-content__column
+	&__column {
+		flex: 0 0 50%;
+	}
+	// .contacts-content__map
+	&__map {
+		height: 100%;
+		@media (max-width: $md2 + px) {
+			height: 300px;
+		}
+	}
+}
+
+.contacts-content-form {
+	padding: 55px 60px;
+	@media (max-width: $md2 + px) {
+		padding: 30px;
+	}
+	// .contacts-content-form__title
+	&__title {
+		font-family: 'AkzidenzGroteskBQ-BdCnd';
+		font-size: 25px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		margin: 0px 0px 30px 0px;
+		color: #fff;
+	}
+	// .contacts-content-form__btn
+	&__btn {
+	}
+}
+
+.contacts-content-form-body {
+	max-width: 375px;
+	@media (max-width: $md2 + px) {
+		max-width: none;
+	}
+}
+
+.contacts-content-form-line {
+	margin: 0px 0px 25px 0px;
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
