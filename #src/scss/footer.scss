@@ -46,7 +46,12 @@ footer{
 	// .footer-body__logo
 	&__logo {
     img {
-      max-height: 40px;
+      width: 155px;
+    }
+		@media (max-width:$md4+px) {
+      img {
+        width: 100px;
+      }
     }
 	}
 }

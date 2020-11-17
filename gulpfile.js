@@ -38,7 +38,7 @@ let path = {
 	src: {
 		favicon: src_folder + "/img/favicon.{jpg,png,svg,gif,ico,webp}",
 		html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
-		js: [src_folder + "/js/app.js", src_folder + "/js/vendors.js"],
+		js: src_folder + "/js/app.js",
 		css: src_folder + "/scss/style.scss",
 		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
 		fonts: src_folder + "/fonts/*.ttf"
@@ -197,14 +197,14 @@ function watchFiles() {
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.images], images);
 }
-let build = gulp.series(clean, fonts_otf, gulp.parallel(html, css, js, favicon, images), fonts, gulp.parallel(fontstyle));
+let build = gulp.series(clean, /*fonts_otf,*/ gulp.parallel(html, css, js, favicon, images), fonts, gulp.parallel(fontstyle));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.favicon = favicon;
-exports.fonts_otf = fonts_otf;
+//exports.fonts_otf = fonts_otf;
 exports.fontstyle = fontstyle;
 exports.fonts = fonts;
 exports.images = images;
