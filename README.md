@@ -1,5 +1,4 @@
 # PrimeOne
-**html, scss, js, gulp**
 
  In the branch `'master'` - the development version. 
  
@@ -7,3 +6,11 @@
 
 ***
 [Посмотреть верстку на GitHub Pages](https://pfafenrot-nika.github.io/PrimeOne/)
+
+***
+
+### Tech Stack
+* Html
+* Scss
+* Js
+* Gulp
