@@ -1,4 +1,5 @@
 # PrimeOne
+**html, scss, js, gulp**
 
  In the branch `'master'` - the development version. 
  
